@@ -45,7 +45,10 @@ namespace ReservaHoteles
 
         private void btn_verEmpleado_Click(object sender, EventArgs e)
         {
-
+            //abrir ventana verEmpleado
+            this.Hide();
+            verEmpleado verEmpleado = new verEmpleado();
+            verEmpleado.Show();
         }
 
         private void btn_crearFactura_Click(object sender, EventArgs e)
@@ -60,13 +63,20 @@ namespace ReservaHoteles
 
         private void btn_crearHabitacion_Click(object sender, EventArgs e)
         {
-
+            //abrir ventana crearHabitacion
+            this.Hide();
+            crearHabitacion crearHabitacion = new crearHabitacion();
+            crearHabitacion.Show();
         }
 
         private void btn_verHabitacion_Click(object sender, EventArgs e)
         {
-
+            //abrir ventana verHabitacion
+            this.Hide();
+            verHabitacion verHabitacion = new verHabitacion();
+            verHabitacion.Show();
         }
+
 
         private void btn_crearHotel_Click(object sender, EventArgs e)
         {

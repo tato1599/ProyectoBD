@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ReservaHoteles
       
         List<string> list = new List<string>();
         byte[] imagen = null;
-
+        byte[] imagenBytes = null;
         public crearHotel()
         {
             InitializeComponent();
@@ -28,8 +29,40 @@ namespace ReservaHoteles
             cb_categoria.DataSource = list;
 
         }
+        public Image ComprimirImagen(Image imagenOriginal)
+        {
+            // Establecer la calidad de compresión deseada
+            Byte calidadDeseada = 004; // En KB
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+            // Obtener el códec de compresión JPEG
+            ImageCodecInfo jpegCodec = GetImageEncoderInfo(ImageFormat.Jpeg);
+
+            // Establecer los parámetros de compresión
+            EncoderParameters encoderParams = new EncoderParameters(1);
+            encoderParams.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, calidadDeseada);
+
+            // Crear una nueva imagen con la calidad de compresión reducida
+            Image imagenComprimida = new Bitmap(imagenOriginal);
+
+            
+
+            return imagenComprimida;
+        }
+
+        private ImageCodecInfo GetImageEncoderInfo(ImageFormat formato)
+        {
+            ImageCodecInfo[] codecs = ImageCodecInfo.GetImageEncoders();
+            foreach (ImageCodecInfo codec in codecs)
+            {
+                if (codec.FormatID == formato.Guid)
+                {
+                    return codec;
+                }
+            }
+            return null;
+        }
+
+            private void btn_guardar_Click(object sender, EventArgs e)
         {
             //guardar en la base datos los datos del hotel y la imagen
             string con = conexion.getConexion();
@@ -50,7 +83,7 @@ namespace ReservaHoteles
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Parameters.AddWithValue("@categoria", categoria);
             comando.Parameters.AddWithValue("@descripcion", descripcion);
-            comando.Parameters.AddWithValue("@imagen", imagen);
+            comando.Parameters.AddWithValue("@imagen", imagenBytes);
             conexiondb.Open();
             comando.ExecuteNonQuery();
 
@@ -81,6 +114,7 @@ namespace ReservaHoteles
             {
                 //mostrar imagen en picture box
                 pb_imagen.Image = new Bitmap(open.FileName);
+
                 //obtener ruta de la imagen
                 string ruta = open.FileName;
       
@@ -97,9 +131,18 @@ namespace ReservaHoteles
                 }
                 else
                 {
-                    //si el tamaño de la imagen es menor a 650 kb
-                    //obtener binario de la imagen
-                    imagen = File.ReadAllBytes(ruta);
+                    
+                    // Si el tamaño de la imagen es menor a 650 kb
+                    // Comprimir imagen
+                    Image imagenComprimida = ComprimirImagen(pb_imagen.Image);
+
+                    // Convertir la imagen comprimida a bytes
+                    
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        imagenComprimida.Save(ms, ImageFormat.Jpeg); // Guardar como JPEG
+                        imagenBytes = ms.ToArray();
+                    }
                     //obtener blob de la imagen
                     
                     //guardar binario en la base de datos
@@ -110,6 +153,14 @@ namespace ReservaHoteles
 
             
 
+        }
+
+        private void btn_regresar_Click(object sender, EventArgs e)
+        {
+            //regresar al menú principal
+            this.Hide();
+            menuPrincipal menu = new menuPrincipal();
+            menu.Show();
         }
     }
 }

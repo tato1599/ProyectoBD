@@ -36,7 +36,7 @@
             // dgv_hoteles
             // 
             this.dgv_hoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_hoteles.Location = new System.Drawing.Point(57, 38);
+            this.dgv_hoteles.Location = new System.Drawing.Point(31, 39);
             this.dgv_hoteles.Name = "dgv_hoteles";
             this.dgv_hoteles.RowTemplate.Height = 25;
             this.dgv_hoteles.Size = new System.Drawing.Size(927, 387);
@@ -45,7 +45,7 @@
             // 
             // btn_regresar
             // 
-            this.btn_regresar.Location = new System.Drawing.Point(883, 455);
+            this.btn_regresar.Location = new System.Drawing.Point(883, 466);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(75, 23);
             this.btn_regresar.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 513);
+            this.ClientSize = new System.Drawing.Size(974, 513);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.dgv_hoteles);
             this.Name = "verHotel";

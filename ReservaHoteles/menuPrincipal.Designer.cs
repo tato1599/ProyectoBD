@@ -112,7 +112,7 @@
             this.btn_verHabitacion.Name = "btn_verHabitacion";
             this.btn_verHabitacion.Size = new System.Drawing.Size(98, 82);
             this.btn_verHabitacion.TabIndex = 7;
-            this.btn_verHabitacion.Text = "button7";
+            this.btn_verHabitacion.Text = "Ver habitaciones";
             this.btn_verHabitacion.UseVisualStyleBackColor = true;
             this.btn_verHabitacion.Click += new System.EventHandler(this.btn_verHabitacion_Click);
             // 
@@ -122,7 +122,7 @@
             this.btn_crearHabitacion.Name = "btn_crearHabitacion";
             this.btn_crearHabitacion.Size = new System.Drawing.Size(98, 82);
             this.btn_crearHabitacion.TabIndex = 6;
-            this.btn_crearHabitacion.Text = "button8";
+            this.btn_crearHabitacion.Text = "Crear habitacion";
             this.btn_crearHabitacion.UseVisualStyleBackColor = true;
             this.btn_crearHabitacion.Click += new System.EventHandler(this.btn_crearHabitacion_Click);
             // 

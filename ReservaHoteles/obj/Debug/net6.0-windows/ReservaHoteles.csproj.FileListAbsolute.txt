@@ -25,3 +25,6 @@ C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windo
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearHotel.resources
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verHotel.resources
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearEmpleado.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearHabitacion.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verEmpleado.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verHabitacion.resources

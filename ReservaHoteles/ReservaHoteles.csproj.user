@@ -7,6 +7,9 @@
     <Compile Update="crearEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="crearHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="crearHotel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="verCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="verEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="verHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="verHotel.cs">

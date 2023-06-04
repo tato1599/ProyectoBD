@@ -21,7 +21,10 @@ namespace ReservaHoteles
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
-
+            //regresar al menu principal
+            this.Hide();
+            menuPrincipal menuPrincipal = new menuPrincipal();
+            menuPrincipal.Show();
         }
 
         private void dgv_hoteles_CellContentClick(object sender, DataGridViewCellEventArgs e)

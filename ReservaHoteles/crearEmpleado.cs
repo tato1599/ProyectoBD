@@ -67,7 +67,7 @@ namespace ReservaHoteles
         {
             //obtener id a partir del nombre del hotel
             string con = conexion.getConexion();
-            string query = "SELECT id_hotel FROM hotel WHERE nombre = '" + tb_hotel.Text + "'";
+            string query = "SELECT hotel_id FROM hotel WHERE nombre = '" + tb_hotel.Text + "'";
             int idHotel = 0;
 
             using (MySqlConnection conexiondb = new MySqlConnection(con))
@@ -79,14 +79,14 @@ namespace ReservaHoteles
                     {
                         while (reader.Read())
                         {
-                            idHotel = reader.GetInt32("id_hotel");
+                            idHotel = reader.GetInt32("hotel_id");
                         }
                     }
                 }
             }
 
             //insertar empleado
-            string query2 = "INSERT INTO empleado (nombre, direccion, telefono, puesto, id_hotel) VALUES ('" + tb_nombre.Text + "', '" + tb_direccion.Text + "', '" + tb_telefono.Text + "', '" + cb_puesto.Text + "', '" + idHotel + "')";
+            string query2 = "INSERT INTO empleado (nombre, direccion, telefono, puesto, hotel_id) VALUES ('" + tb_nombre.Text + "', '" + tb_direccion.Text + "', '" + tb_telefono.Text + "', '" + cb_puesto.Text + "', '" + idHotel + "')";
             MySqlConnection conexiondb2 = new MySqlConnection(con);
             conexiondb2.Open();
             MySqlCommand comando2 = new MySqlCommand(query2, conexiondb2);
