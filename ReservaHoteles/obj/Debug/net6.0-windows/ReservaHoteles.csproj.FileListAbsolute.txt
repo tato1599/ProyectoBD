@@ -20,3 +20,8 @@ C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windo
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.pdb
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.genruntimeconfig.cache
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ref\ReservaHoteles.dll
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearCliente.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verCliente.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearHotel.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verHotel.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearEmpleado.resources
