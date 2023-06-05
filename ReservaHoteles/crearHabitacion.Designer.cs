@@ -39,6 +39,7 @@
             this.pb_imagen = new System.Windows.Forms.PictureBox();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nud_capacidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_imagen)).BeginInit();
             this.SuspendLayout();
@@ -53,9 +54,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(36, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 15);
+            this.label5.Size = new System.Drawing.Size(39, 17);
             this.label5.TabIndex = 73;
             this.label5.Text = "Hotel";
             // 
@@ -70,18 +72,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(36, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 15);
+            this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 76;
             this.label1.Text = "Tipo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(36, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 77;
             this.label2.Text = "Capacidad";
             // 
@@ -95,9 +99,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(36, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 15);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 79;
             this.label3.Text = "Precio por noche";
             // 
@@ -110,6 +115,7 @@
             // 
             // pb_imagen
             // 
+            this.pb_imagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pb_imagen.Location = new System.Drawing.Point(409, 50);
             this.pb_imagen.Name = "pb_imagen";
             this.pb_imagen.Size = new System.Drawing.Size(170, 162);
@@ -120,29 +126,43 @@
             // 
             // btn_regresar
             // 
+            this.btn_regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_regresar.Location = new System.Drawing.Point(316, 299);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(75, 23);
             this.btn_regresar.TabIndex = 83;
             this.btn_regresar.Text = "Regresar";
-            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.UseVisualStyleBackColor = false;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.Location = new System.Drawing.Point(47, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 84;
             this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(409, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(217, 17);
+            this.label4.TabIndex = 85;
+            this.label4.Text = "Click en el recuadro para subir imagen";
             // 
             // crearHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 359);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(635, 359);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.pb_imagen);
@@ -176,5 +196,6 @@
         private PictureBox pb_imagen;
         private Button btn_regresar;
         private Button button2;
+        private Label label4;
     }
 }

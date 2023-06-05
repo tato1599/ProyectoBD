@@ -35,6 +35,7 @@
             // 
             // dgv_verFacturas
             // 
+            this.dgv_verFacturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgv_verFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_verFacturas.Location = new System.Drawing.Point(12, 44);
             this.dgv_verFacturas.Name = "dgv_verFacturas";
@@ -44,18 +45,20 @@
             // 
             // btn_regresar
             // 
+            this.btn_regresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_regresar.Location = new System.Drawing.Point(547, 439);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(75, 23);
             this.btn_regresar.TabIndex = 1;
             this.btn_regresar.Text = "Regresar";
-            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.UseVisualStyleBackColor = false;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // verFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(634, 483);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.dgv_verFacturas);

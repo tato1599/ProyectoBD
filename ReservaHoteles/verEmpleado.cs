@@ -101,5 +101,31 @@ namespace ReservaHoteles
 
 
         }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            //editar empleado seleccionado y actualizar dgv y base de datos tambien revisar que no se dejen campos vacios
+            int indice = dgv_verEmpleado.CurrentCell.RowIndex;
+            string con = conexion.getConexion();
+            string query = "UPDATE empleado SET nombre = @nombre, direccion = @direccion, telefono = @telefono, puesto = @puesto WHERE empleado_id = @id";
+            MySqlConnection conexiondb = new MySqlConnection(con);
+            MySqlCommand comando = new MySqlCommand(query, conexiondb);
+            comando.Parameters.AddWithValue("@nombre", dgv_verEmpleado.CurrentRow.Cells[1].Value.ToString());
+            comando.Parameters.AddWithValue("@direccion", dgv_verEmpleado.CurrentRow.Cells[2].Value.ToString());
+            comando.Parameters.AddWithValue("@telefono", dgv_verEmpleado.CurrentRow.Cells[3].Value.ToString());
+            comando.Parameters.AddWithValue("@puesto", dgv_verEmpleado.CurrentRow.Cells[4].Value.ToString());
+            comando.Parameters.AddWithValue("@id", dgv_verEmpleado.CurrentRow.Cells[0].Value.ToString());
+            MySqlDataReader reader;
+            conexiondb.Open();
+            reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+            }
+            //mostrar mensaje de confirmacion
+            MessageBox.Show("Empleado editado correctamente");
+
+            
+            
+        }
     }
 }

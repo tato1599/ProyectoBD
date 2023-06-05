@@ -86,5 +86,45 @@ namespace ReservaHoteles
            ((DataGridViewImageColumn)dgv_hoteles.Columns["Imagen"]).ImageLayout = DataGridViewImageCellLayout.Stretch;
 
         }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            //editar hotel seleccionado en el dgv y acutalizar dgv con los nuevos datos del hotel editado y base de datos
+            string id = dgv_hoteles.CurrentRow.Cells[0].Value.ToString();
+            //al darle click a la imgane abrir openfile dialog y cambiar d eimagen
+            
+            string con = conexion.getConexion();
+            string query = "SELECT * FROM hotel WHERE hotel_id = '" + id + "'";
+            MySqlConnection conexiondb = new MySqlConnection(con);
+            MySqlCommand comando = new MySqlCommand(query, conexiondb);
+            MySqlDataReader reader;
+            conexiondb.Open();
+            reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                string nombre = reader.GetString("nombre");
+                string direccion = reader.GetString("direccion");
+                string telefono = reader.GetString("telefono");
+                string categoria = reader.GetString("categoria");
+                string descripcion = reader.GetString("descripcion");
+
+                
+
+
+                byte[] imagenBytes = (byte[])reader["imagen"];
+                // Convertir de bytes a imagen
+                using (MemoryStream ms = new MemoryStream(imagenBytes))
+                {
+                    Image imagen = Image.FromStream(ms);
+                    dgv_hoteles.Rows.Add(id, nombre, direccion, telefono, categoria, descripcion, imagen);
+                }
+            }
+                
+
+            
+
+
+
+        }
     }
 }

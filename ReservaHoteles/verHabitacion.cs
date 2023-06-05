@@ -79,5 +79,24 @@ namespace ReservaHoteles
             menuPrincipal menuPrincipal = new menuPrincipal();
             menuPrincipal.Show();
         }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            //editar habitacion seleccionada en el datagridview y en la base de datos
+            int indice = dgv_habitacion.CurrentRow.Index;
+            string con = conexion.getConexion();
+            string query = "UPDATE habitacion SET hotel_id = @hotel_id, tipo = @tipo, capacidad = @capacidad, precio_noche = @precio_noche WHERE habitacion_id = @habitacion_id";
+            MySqlConnection conexiondb = new MySqlConnection(con);
+            MySqlCommand comando = new MySqlCommand(query, conexiondb);
+            comando.Parameters.AddWithValue("@habitacion_id", dgv_habitacion.Rows[indice].Cells[0].Value.ToString());
+            comando.Parameters.AddWithValue("@hotel_id", dgv_habitacion.Rows[indice].Cells[1].Value.ToString());
+            comando.Parameters.AddWithValue("@tipo", dgv_habitacion.Rows[indice].Cells[2].Value.ToString());
+            comando.Parameters.AddWithValue("@capacidad", dgv_habitacion.Rows[indice].Cells[3].Value.ToString());
+            comando.Parameters.AddWithValue("@precio_noche", dgv_habitacion.Rows[indice].Cells[4].Value.ToString());
+            conexiondb.Open();
+            comando.ExecuteNonQuery();
+            conexiondb.Close();
+            MessageBox.Show("Habitacion editada correctamente");
+        }
     }
 }

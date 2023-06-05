@@ -51,6 +51,7 @@
             this.btn_editar.TabIndex = 1;
             this.btn_editar.Text = "Editar";
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_regresar
             // 

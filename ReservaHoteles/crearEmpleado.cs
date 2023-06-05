@@ -13,10 +13,13 @@ namespace ReservaHoteles
 {
     public partial class crearEmpleado : Form
     {
+        //lista de puestos
+        List<string> puestos = new List<string>() { "Recepcionista", "Gerente", "Cocinero", "Botones", "Mozo", "Limpieza" };
         public crearEmpleado()
         {
             InitializeComponent();
             ConfigurarAutocompletado();
+            cb_puesto.DataSource = puestos;
         }
 
         
@@ -67,6 +70,33 @@ namespace ReservaHoteles
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            //validar campos
+            if (tb_nombre.Text == "" || tb_direccion.Text == "" || tb_telefono.Text == "" || tb_hotel.Text == "" || cb_puesto.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos");
+                return;
+            }
+            //validar telefono
+            if (tb_telefono.Text.Length != 10)
+            {
+                MessageBox.Show("El telefono debe tener 10 digitos");
+                return;
+            }
+            //validar que no se ingresen numeros en el nombre
+            if (tb_nombre.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("El nombre no puede contener numeros");
+                return;
+            }
+            //validar que no se ingresen letras en el telefono
+            if (tb_telefono.Text.Any(char.IsLetter))
+            {
+                MessageBox.Show("El telefono no puede contener letras");
+                return;
+            }
+
+
+
             //obtener id a partir del nombre del hotel
             string con = conexion.getConexion();
             string query = "SELECT hotel_id FROM hotel WHERE nombre = '" + tb_hotel.Text + "'";

@@ -18,6 +18,8 @@ namespace ReservaHoteles
         List<string> list = new List<string>();
         byte[] imagen = null;
         byte[] imagenBytes = null;
+       
+
         public crearHotel()
         {
             InitializeComponent();
@@ -161,6 +163,11 @@ namespace ReservaHoteles
             this.Hide();
             menuPrincipal menu = new menuPrincipal();
             menu.Show();
+        }
+
+        private void crearHotel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
