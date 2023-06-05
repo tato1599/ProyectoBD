@@ -53,11 +53,19 @@ namespace ReservaHoteles
 
         private void btn_crearFactura_Click(object sender, EventArgs e)
         {
+            //ver ventana crearFactura
+            this.Hide();
+            crearFactura crearFactura = new crearFactura();
+            crearFactura.Show();
 
         }
 
         private void btn_verFactura_Click(object sender, EventArgs e)
         {
+            //ver ventana verFactura
+            this.Hide();
+            verFactura verFactura = new verFactura();
+            verFactura.Show();
 
         }
 
@@ -98,12 +106,18 @@ namespace ReservaHoteles
 
         private void btn_crearReserva_Click(object sender, EventArgs e)
         {
-
+            //abrir ventana crearReserva
+            this.Hide();
+            crearReservacion crearReserva = new crearReservacion();
+            crearReserva.Show();
         }
 
         private void btn_verReserva_Click(object sender, EventArgs e)
         {
-
+            //ver ventana reservacion
+            this.Hide();
+            verReservacion verReserva = new verReservacion();
+            verReserva.Show();
         }
     }
 }
