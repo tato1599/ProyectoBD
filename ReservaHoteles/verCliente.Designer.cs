@@ -71,6 +71,7 @@
             this.btn_borrar.TabIndex = 3;
             this.btn_borrar.Text = "Eliminar";
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // verCliente
             // 

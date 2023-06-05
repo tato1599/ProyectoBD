@@ -19,6 +19,8 @@ namespace ReservaHoteles
             ConfigurarAutocompletado();
         }
 
+        
+
         private List<string> ObtenerNombresDeHotelesDesdeBaseDeDatos()
         {
             List<string> nombresHoteles = new List<string>();

@@ -74,5 +74,32 @@ namespace ReservaHoteles
             
 
         }
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            int indice = dgv_verEmpleado.CurrentCell.RowIndex;
+
+            //elimniar de la base de datos y del dgv y poner mensaje de confirmacion
+            
+            DialogResult ventana = MessageBox.Show("Seguro que desea eliminar?" , "Eliminar", MessageBoxButtons.YesNo);
+
+            if (ventana == DialogResult.Yes)
+            {
+                string con = conexion.getConexion();
+                string query = "DELETE FROM empleado WHERE cliente_id = @id";
+                MySqlConnection conexiondb = new MySqlConnection(con);
+                MySqlCommand comando = new MySqlCommand(query, conexiondb);
+                comando.Parameters.AddWithValue("@id", dgv_verEmpleado.CurrentRow.Cells[indice].Value.ToString());
+                MySqlDataReader reader;
+                conexiondb.Open();
+                reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                }
+                dgv_verEmpleado.Rows.RemoveAt(dgv_verEmpleado.CurrentRow.Index);
+            }
+
+
+        }
     }
 }

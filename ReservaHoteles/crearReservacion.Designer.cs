@@ -85,6 +85,8 @@
             this.tb_hotel.Name = "tb_hotel";
             this.tb_hotel.Size = new System.Drawing.Size(200, 23);
             this.tb_hotel.TabIndex = 4;
+            this.tb_hotel.TextChanged += new System.EventHandler(this.tb_hotel_TextChanged);
+            this.tb_hotel.Leave += new System.EventHandler(this.tb_hotel_Leave);
             // 
             // btn_guardar
             // 
@@ -122,6 +124,7 @@
             this.tb_habitacion.Name = "tb_habitacion";
             this.tb_habitacion.Size = new System.Drawing.Size(121, 23);
             this.tb_habitacion.TabIndex = 8;
+            this.tb_habitacion.SelectedIndexChanged += new System.EventHandler(this.tb_habitacion_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -220,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 544);
+            this.ClientSize = new System.Drawing.Size(365, 544);
             this.Controls.Add(this.tb_tipo);
             this.Controls.Add(this.tb_capacidad);
             this.Controls.Add(this.tb_precio);
@@ -243,6 +246,7 @@
             this.Controls.Add(this.dtp_fechaCheckIn);
             this.Name = "crearReservacion";
             this.Text = "Crear Reservacion";
+            this.Load += new System.EventHandler(this.crearReservacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

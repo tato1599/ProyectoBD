@@ -28,3 +28,7 @@ C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windo
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearHabitacion.resources
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verEmpleado.resources
 C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verHabitacion.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearFactura.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.crearReservacion.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verFactura.resources
+C:\Users\esemi\source\repos\ReservaHoteles\ReservaHoteles\obj\Debug\net6.0-windows\ReservaHoteles.verReservacion.resources

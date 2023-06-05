@@ -119,5 +119,11 @@ namespace ReservaHoteles
             verReservacion verReserva = new verReservacion();
             verReserva.Show();
         }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            //salir del programa
+            Application.Exit();
+        }
     }
 }

@@ -7,10 +7,16 @@
     <Compile Update="crearEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="crearFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="crearHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="crearHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="crearReservacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
@@ -25,10 +31,16 @@
     <Compile Update="verEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="verFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="verHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="verHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="verReservacion.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

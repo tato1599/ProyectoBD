@@ -121,4 +121,7 @@
   <data name="hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HD-wallpaper-blur-gradation-blue-pastel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HD-wallpaper-blur-gradation-blue-pastel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

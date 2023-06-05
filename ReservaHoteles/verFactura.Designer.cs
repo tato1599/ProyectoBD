@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgv_verFacturas = new System.Windows.Forms.DataGridView();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verFacturas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgv_verFacturas
+            // 
+            this.dgv_verFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_verFacturas.Location = new System.Drawing.Point(12, 44);
+            this.dgv_verFacturas.Name = "dgv_verFacturas";
+            this.dgv_verFacturas.RowTemplate.Height = 25;
+            this.dgv_verFacturas.Size = new System.Drawing.Size(610, 352);
+            this.dgv_verFacturas.TabIndex = 0;
+            // 
+            // btn_regresar
+            // 
+            this.btn_regresar.Location = new System.Drawing.Point(547, 439);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(75, 23);
+            this.btn_regresar.TabIndex = 1;
+            this.btn_regresar.Text = "Regresar";
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // verFactura
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(634, 483);
+            this.Controls.Add(this.btn_regresar);
+            this.Controls.Add(this.dgv_verFacturas);
+            this.Name = "verFactura";
             this.Text = "verFactura";
+            this.Load += new System.EventHandler(this.verFactura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_verFacturas)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private DataGridView dgv_verFacturas;
+        private Button btn_regresar;
     }
 }
