@@ -89,5 +89,63 @@ namespace ReservaHoteles
                 }
             }
         }
+
+        private void dgv_verClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            //validar que no se dejen campos vacios al editar un cliente
+            int fila = dgv_verClientes.CurrentRow.Index;
+            if (fila >= 0)
+            {
+                if (dgv_verClientes.CurrentRow.Cells[1].Value.ToString() == "" || dgv_verClientes.CurrentRow.Cells[2].Value.ToString() == "" || dgv_verClientes.CurrentRow.Cells[3].Value.ToString() == "" || dgv_verClientes.CurrentRow.Cells[4].Value.ToString() == "")
+                {
+                    MessageBox.Show("No se pueden dejar campos vacios");
+                }
+                if (dgv_verClientes.CurrentRow.Cells[3].Value.ToString().Length != 10)
+                {
+                    MessageBox.Show("El telefono debe tener 10 digitos");
+                }
+                if (dgv_verClientes.CurrentRow.Cells[4].Value.ToString().Contains("@") == false)
+                {
+                    MessageBox.Show("El correo debe contener un @");
+                }
+                if (dgv_verClientes.CurrentRow.Cells[4].Value.ToString().Contains(".com") == false)
+                {
+                    MessageBox.Show("El correo debe contener .com");
+                }
+                //validar que en el nombre no se ingresen numeros
+                if (dgv_verClientes.CurrentRow.Cells[1].Value.ToString().Any(char.IsDigit))
+                {
+                    MessageBox.Show("El nombre no debe contener numeros");
+                }
+                else
+                {
+                    //editar los datos cambiados en el dgv y actualizarlos en la base de datos
+                    string con = conexion.getConexion();
+                    string query = "UPDATE cliente SET nombre = @nombre, direccion = @direccion, telefono = @telefono, correo = @correo WHERE cliente_id = @id";
+                    MySqlConnection conexiondb = new MySqlConnection(con);
+                    MySqlCommand comando = new MySqlCommand(query, conexiondb);
+                    comando.Parameters.AddWithValue("@id", dgv_verClientes.CurrentRow.Cells[0].Value.ToString());
+                    comando.Parameters.AddWithValue("@nombre", dgv_verClientes.CurrentRow.Cells[1].Value.ToString());
+                    comando.Parameters.AddWithValue("@direccion", dgv_verClientes.CurrentRow.Cells[2].Value.ToString());
+                    comando.Parameters.AddWithValue("@telefono", dgv_verClientes.CurrentRow.Cells[3].Value.ToString());
+                    comando.Parameters.AddWithValue("@correo", dgv_verClientes.CurrentRow.Cells[4].Value.ToString());
+                    MySqlDataReader reader;
+                    conexiondb.Open();
+                    reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                    }
+                    MessageBox.Show("Cliente actualizado");
+                }
+            }
+
+          
+
+        }
     }
 }

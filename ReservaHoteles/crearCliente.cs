@@ -31,7 +31,26 @@ namespace ReservaHoteles
             string correo = tb_correo.Text;
             string direccion = tb_direccion.Text;
 
-
+            //validar datos vacios 
+            if (nombre == "" || telefono == "" || correo == "" || direccion == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+           
+            //validar que el correo sea valido
+            if (!correo.Contains("@"))
+            {
+                MessageBox.Show("El correo debe ser valido");
+                return;
+            }
+            //validar que no se pongan numeros en el nombre
+            if (nombre.Any(char.IsDigit))
+            {
+                MessageBox.Show("El nombre no debe contener numeros");
+                return;
+            }
+            
             
 
             //insertar en la base de datos

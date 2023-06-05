@@ -43,6 +43,7 @@
             this.dgv_verClientes.RowTemplate.Height = 25;
             this.dgv_verClientes.Size = new System.Drawing.Size(513, 308);
             this.dgv_verClientes.TabIndex = 0;
+            this.dgv_verClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_verClientes_CellContentClick);
             // 
             // btn_editar
             // 
@@ -52,6 +53,7 @@
             this.btn_editar.TabIndex = 1;
             this.btn_editar.Text = "Editar";
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_regresar
             // 
